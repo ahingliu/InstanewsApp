@@ -1,0 +1,36 @@
+/* makes all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'open_sanslight';
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+    background-color: black;
+}
+
+.logo {
+ height: auto;
+ width: auto;
+}
+
+/* Footer Section */
+
+.f.text {
+    font-family: 'open_sanslight';
+    color: #c2c2c2;
+}
+
+/* Dropdown Menu Section */
+
