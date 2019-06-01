@@ -1,54 +1,58 @@
-// Require Gulp first!
-//const gulp = require("gulp");
-// This is a very basic Gulp task,
-// with a name and some code to run
-// when this task is called:
-//gulp.task("default", function(done) {
-  //console.log("Hello world");
-  //done();
-//});
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+const rename = require('gulp-rename');
+const terser = require("gulp-terser");
+const sass = require('gulp-sass');
+const eslint = require('gulp-eslint');
+const uglifycss = require('gulp-uglifycss');
 
-const gulp = require("gulp"); // Load Gulp!
-// Now that we've installed the terser package we can require it:
-const terser = require("gulp-terser"),
-browserSync = require('browser-sync').create(),
-eslint = require('gulp-eslint');
+gulp.task('scripts', function() {
+return gulp
+.src('js/*.js')
+.pipe(eslint())
+.pipe(eslint.format())
+.pipe(eslint.failAfterError())
+.pipe(terser({
+keep_fnames: false,
+toplevel: true
+}))
 
-// Static server
+.pipe(gulp.dest('./build/js'));
+});
+
 gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+browserSync.init({
+  server: {
+      baseDir: './'
+  }
 });
-  rename = require("gulp-rename");
-gulp.task("scripts", function() {
-  return gulp
-    .src("./js/*.js") // What files do we want gulp to consume?
-    pipe(eslint())
-    .pipe(eslint,format())
-    .pipe(eslint.failAfterError)
-    .pipe(terser({
-        keep_fnames: false,
-        toplevel: true
-    })) // Call the terser function on these files
-    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
-    .pipe(gulp.dest("./build/js")); // Where do we put the result?
+gulp.watch(['sass/*.scss', 'js/*.js']).on('change', browserSync.reload);
 });
 
-gulp.task('say_hello', function(done) {
-    console.log('Hello!');
-  done();
+
+gulp.task('sass', function () {
+  return gulp.src('sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions']
+      })
+      // .pipe(cleancss())
+    )
+    .pipe(uglifycss())
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./build/css'));
 });
+
 
 gulp.task('reload', function() {
-    browserSync.reload();
+browserSync.reload();
 });
 
-gulp.task("watch", function() {
-    gulp.watch(["./js/*.js", "index.html"], gulp.series("scripts", "reload"));
-  });
+gulp.task('watch', function() {
+  gulp.watch('js/*.js', gulp.series('scripts'));
+  gulp.watch('sass/*.scss', gulp.series('sass'));
+});
 
-gulp.task('default', gulp.parallel('watch', "browser-sync"));
-
+gulp.task('default', gulp.parallel('watch', 'browser-sync'));

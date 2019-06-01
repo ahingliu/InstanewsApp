@@ -1,3 +1,20 @@
+@import 'global';
+@import 'variables';
+@import 'mixin';
+@import 'reset';
+@import 'typography';
+
+
+/* Footer Section */
+
+.f.text {
+    font-family: 'open_sanslight';
+    color: #c2c2c2;
+    text-align: center;
+}
+
+/* Dropdown Menu Section */
+
 /* makes all images responsive */
 img {
     max-width: 100%;
@@ -25,12 +42,9 @@ body {
  width: auto;
 }
 
-/* Footer Section */
-
-.f.text {
-    font-family: 'open_sanslight';
-    color: #c2c2c2;
+.test {
+    text-transform: uppercase;
 }
 
-/* Dropdown Menu Section */
+//testing
 
