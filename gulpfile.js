@@ -17,7 +17,7 @@ return gulp
 keep_fnames: false,
 toplevel: true
 }))
-
+.pipe(rename({ extname: '.min.js' }))
 .pipe(gulp.dest('./build/js'));
 });
 

@@ -13,16 +13,15 @@
 
 <body>
 
-    <header>
-            <div class="logo">
-                    <img src="./assets/images/nyt-logo.svg" alt="nyt-logo">
-                </div>
-    </header>
+    <header class="main-header">
 
-    <div class="search-form">
-        <p>Choose a section:</p>
-        <form>
-            <select name="sections" id="sections">
+        <img src="./assets/images/nyt-logo.svg" alt="nyt-logo">
+
+
+
+        <form class="section">
+            <p>Choose a section:</p>
+            <select class="sections" name="sections" id="sections">
                 <option value>Sections...</option>
                 <option value="home">Home</option>
                 <option value="arts">Arts</option>
@@ -32,11 +31,26 @@
                 <option value="fashion">Fashion</option>
             </select>
         </form>
-    </div>
+    </header>
+
+    <section class="content"></section>
+    
+    <!-- <div><img class="loading-gif" src="assets/images/ajax-loader.gif" /></div>> -->
+
+
+<div class="loader">
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__ball"></div>
+</div>
+
 
     <footer>
-        <div>
-            <p class="f.text">@ Copyright 2019 <span class="test">instanews</span></p>
+        <div class="footer">
+            <p class="ftext">@ Copyright 2019 INSTANEWS</p>
         </div>
     </footer>
 

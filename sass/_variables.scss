@@ -1,1 +1,18 @@
-//site size and breakpoints
+// Background colors
+$default-background: #000;
+
+// Font variables
+$default-fontsize: 16px;
+$default-textcolor: #fff;
+$footer-text: #c2c2c2;
+$default-fontfamily: 'open_sanslight', sans-serif;
+
+// @Media Screen Breakpoints
+
+$desktop: 1240px;
+$tablet: 600px;
+$hd: 1720px;
+
+$desktop: only screen and (min-width : $desktop);
+$tablet: only screen and (min-width : $tablet);
+$hd: only screen and (min-width : $hd);

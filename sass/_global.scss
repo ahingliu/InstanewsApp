@@ -12,83 +12,56 @@ html {
 
 html,
 body {
-    font-size: 16px;
-    font-family: 'open_sanslight';
-    font-weight: normal;
-    font-style: normal;
-    color: #ffffff;
-    background-color: black;
+  color: $default-textcolor;
+  background-color: $default-background;
+  font-size: $default-fontsize;
+  font-family: $default-fontfamily;
+  font-weight: normal;
+  font-style: normal;
+  display: flex;
+  flex-direction: column; 
+  align-items:flex-start;
 }
 
 .logo {
- height: auto;
- width: auto;
+  height: auto;
+  width: auto;
+ }
+
+.main-header {
+ display: flex;
+ text-align: center;  
+ margin-top: 12rem;
+ margin-left: 2rem;
+ 
 }
+
+.section {
+  font-size: $default-fontsize;
+  font-family: $default-fontfamily;
+  font-weight: 400;
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+#sections {
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+.footer, .ftext {
+  color: $footer-text;
+  font-size: $default-fontsize;
+  font-family: $default-fontfamily;
+  margin-top: 15rem;
+  margin-left: 1rem;
+  font-weight: 400;
+
+}
+
 
 // Media Queries 
 
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  
-    //CSS
-    
-  }
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    //CSS
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
-    //CSS
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    //CSS
-    
-  }
-  
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-  
-  @media (min-width: 481px) and (max-width: 767px) {
-    
-    //CSS
-    
-  }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
-    //CSS
-    
-  }
