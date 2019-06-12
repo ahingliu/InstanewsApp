@@ -12,19 +12,25 @@
       let abs = data.results[i].abstract
 
        $('.content').append(
-        `<section class="content">
-         <ul> 
+         `<ul> 
             <li class="article">
-            <div class="news-img">  
-            <a href id="article-link" alt="url" target="_blank"="${url}">
+            <a href="${url}" id="article-link" alt="url" target="_blank">
                 <img src =${image}>
-                <p class="summary">${abs}</p>
             </a>
-            </div>
+            <p class="summary">${abs}</p>
             </li>
-        </ul>
-        </section>`
+        </ul>`
        );
+
+       $('.main-header').css({
+        'height': '300px',
+        'margin-bottom': '1rem'
+      });       
+      $('.main-header img').css({
+        'height': '150px',
+        'padding-top': '3rem'        
+      });
+
      }
    });
  });

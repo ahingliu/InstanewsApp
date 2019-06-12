@@ -1,13 +1,13 @@
 /* makes all images responsive */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -18,30 +18,31 @@ body {
   font-family: $default-fontfamily;
   font-weight: normal;
   font-style: normal;
-  display: flex;
-  flex-direction: column; 
-  align-items:flex-start;
 }
 
 .logo {
   height: auto;
   width: auto;
- }
+}
 
 .main-header {
- display: flex;
- text-align: center;  
- margin-top: 12rem;
- margin-left: 2rem;
- 
+  display: flex;
+  align-items: center;
+  height: 500px;
+  flex-direction: column;
+
+  img {
+    padding-top: 10rem;
+    height: 200px;
+  }
+
 }
 
 .section {
   font-size: $default-fontsize;
   font-family: $default-fontfamily;
   font-weight: 400;
-  margin-left: 5rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 #sections {
@@ -52,16 +53,47 @@ body {
   margin-top: 1rem;
 }
 
-.footer, .ftext {
-  color: $footer-text;
-  font-size: $default-fontsize;
-  font-family: $default-fontfamily;
-  margin-top: 15rem;
-  margin-left: 1rem;
+footer {
   font-weight: 400;
+  width: 100%;
+  text-align: center;
 
+  .ftext {
+    padding: 2rem 0;
+    color: $footer-text;
+    font-size: $default-fontsize;
+    font-family: $default-fontfamily;
+  }
+}
+
+.content {
+  display: grid;
+  grid-gap: 5px;
+
+  .article {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 400px;
+    }
+
+    .summary {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      background-color: black;
+      opacity: 0.80;
+      bottom: 0;
+      padding: 2rem;
+      text-align: justify;
+      line-height: 1.2rem;
+    }
+  }
 }
 
 
-// Media Queries 
 
+
+
+// Media Queries 
