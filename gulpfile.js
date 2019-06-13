@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
-const terser = require("gulp-terser");
+const terser = require('gulp-terser');
 const sass = require('gulp-sass');
 const eslint = require('gulp-eslint');
 const uglifycss = require('gulp-uglifycss');
@@ -10,13 +10,10 @@ const uglifycss = require('gulp-uglifycss');
 gulp.task('scripts', function() {
 return gulp
 .src('js/*.js')
-.pipe(eslint())
-.pipe(eslint.format())
-.pipe(eslint.failAfterError())
-.pipe(terser({
-keep_fnames: false,
-toplevel: true
-}))
+// .pipe(eslint())
+// .pipe(eslint.format())
+// .pipe(eslint.failAfterError())
+.pipe(terser())
 .pipe(rename({ extname: '.min.js' }))
 .pipe(gulp.dest('./build/js'));
 });
