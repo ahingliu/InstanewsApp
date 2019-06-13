@@ -31,6 +31,21 @@ body {
   align-items: center;
   height: 500px;
   flex-direction: column;
+  width: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: left;
+    margin-left: 2rem;
+    justify-content: left;
+  }
 
   img {
     padding-top: 10rem;
@@ -94,113 +109,3 @@ footer {
   }
 }
 
-// Media Queries 
-
-/*@media only screen and (max-width: 599px) {
-  
-  .main-header {
-    display: flex;
-    align-items: center;
-    height: 500px;
-    flex-direction: column;
-  }
-    img {
-      padding-top: 10rem;
-      height: 200px;
-    }
-  }
-  .section {
-    margin-top: 5px;
-   
-  }*/
-
-@media (min-width: 600px) {
-  
-  .logo {
-    height: auto;
-    width: auto;
-  }
-
-  .main-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    
-    p{
-      margin-top: 100px;
-    }
-  }
-    img {
-      height: 150px;
-    }
-
-    .ftext {
-      text-align: center;
-    }
-}
-.section {
-  
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin-left: 15px;
-  
-}
-
-
-
-@media only screen and (min-width: 1240px) {
-  
-  .logo {
-    height: auto;
-    width: auto;
-  }
-
-  .main-header {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    margin-left: 2rem;
-    justify-content: left;
-    width: 100%;
-    
-    p{
-      margin-top: 100px;
-    }
-  }
-    img {
-      height: 150px;
-    }
-
-    footer {
-  .ftext {
-    margin-left: 2rem;
-    text-align: left;
-}
-}
-
-}
-.section {
-  
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin-left: 15px;
-}
-
-
-
-
-
-/*@media screen and (min-width: $desktop) {
-  
-  .main-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-}}*/

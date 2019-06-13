@@ -38,7 +38,14 @@
       }
 
       if(tablet.matches) {
-
+        $('.main-header').css({
+          'height': '300px',
+          'margin-bottom': '1rem'
+        });   
+        $('.main-header img').css({
+          'height': '150px',
+          'padding-top': '3rem'        
+        });    
       }
       
       if(desktop.matches) {
