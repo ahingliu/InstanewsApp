@@ -11,8 +11,8 @@
     }
 }
 
-@mixin hd {
-  @media (min-width: $hd) {
+@mixin mobile {
+  @media (min-width: $mobile) {
     @content;
   }
 }

@@ -21,21 +21,34 @@
             </li>
         </ul>`
        );
+      
+      const mobile = window.matchMedia('(max-width: 599px)');
+      const tablet = window.matchMedia('(min-width: 600px) and (max-width: 1239px)')
+      const desktop = window.matchMedia('(min-width: 1240px)');
 
-       $('.main-header').css({
-        'height': '300px',
-        'margin-bottom': '1rem'
-      });       
-      $('.main-header img').css({
-        'height': '150px',
-        'padding-top': '3rem'        
-      });
+      if (mobile.matches) {
+        $('.main-header').css({
+          'height': '300px',
+          'margin-bottom': '1rem'
+        });   
+        $('.main-header img').css({
+          'height': '150px',
+          'padding-top': '3rem'        
+        });    
+      }
+
+      if(tablet.matches) {
+
+      }
+      
+      if(desktop.matches) {
+
+      }
+     
+
+
 
      }
    });
  });
 
-/* <section class="content">
- <a href="#article-link"><img src="article image" alt="Top Stories"></a>
- <p>abstract</p>
-  </section> */

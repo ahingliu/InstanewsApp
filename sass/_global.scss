@@ -23,6 +23,7 @@ body {
 .logo {
   height: auto;
   width: auto;
+  margin-bottom: 10px;
 }
 
 .main-header {
@@ -35,14 +36,14 @@ body {
     padding-top: 10rem;
     height: 200px;
   }
-
 }
 
 .section {
   font-size: $default-fontsize;
   font-family: $default-fontfamily;
   font-weight: 400;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-left: 0.75rem;
 }
 
 #sections {
@@ -51,15 +52,16 @@ body {
   font-size: 18px;
   font-weight: 100;
   margin-top: 1rem;
+  
 }
 
 footer {
   font-weight: 400;
   width: 100%;
-  text-align: center;
 
   .ftext {
     padding: 2rem 0;
+    text-align: center;
     color: $footer-text;
     font-size: $default-fontsize;
     font-family: $default-fontfamily;
@@ -92,8 +94,113 @@ footer {
   }
 }
 
-
-
-
-
 // Media Queries 
+
+/*@media only screen and (max-width: 599px) {
+  
+  .main-header {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+  }
+    img {
+      padding-top: 10rem;
+      height: 200px;
+    }
+  }
+  .section {
+    margin-top: 5px;
+   
+  }*/
+
+@media (min-width: 600px) {
+  
+  .logo {
+    height: auto;
+    width: auto;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    
+    p{
+      margin-top: 100px;
+    }
+  }
+    img {
+      height: 150px;
+    }
+
+    .ftext {
+      text-align: center;
+    }
+}
+.section {
+  
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 15px;
+  
+}
+
+
+
+@media only screen and (min-width: 1240px) {
+  
+  .logo {
+    height: auto;
+    width: auto;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-left: 2rem;
+    justify-content: left;
+    width: 100%;
+    
+    p{
+      margin-top: 100px;
+    }
+  }
+    img {
+      height: 150px;
+    }
+
+    footer {
+  .ftext {
+    margin-left: 2rem;
+    text-align: left;
+}
+}
+
+}
+.section {
+  
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 15px;
+}
+
+
+
+
+
+/*@media screen and (min-width: $desktop) {
+  
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}}*/

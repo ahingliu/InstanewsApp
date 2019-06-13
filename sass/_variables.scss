@@ -11,8 +11,8 @@ $default-fontfamily: 'open_sanslight', sans-serif;
 
 $desktop: 1240px;
 $tablet: 600px;
-$hd: 1720px;
+$mobile: 300px;
 
 $desktop: only screen and (min-width : $desktop);
 $tablet: only screen and (min-width : $tablet);
-$hd: only screen and (min-width : $hd);
+$hd: only screen and (min-width : $mobile);
