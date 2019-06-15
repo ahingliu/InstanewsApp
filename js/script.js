@@ -1,40 +1,43 @@
-function loader() {
-  $(".spinner").show();
-  console.log("visible");
-}
+$(function() {
+  $("select").selectric();
 
-function loaderDone() {
-  setTimeout(function() {
-    $(".spinner").hide();
-  }, 3000);
-}
+  function loader() {
+    $(".spinner").show();
+    console.log("visible");
+  }
 
-$(".spinner").hide();
+  function loaderDone() {
+    setTimeout(function() {
+      $(".spinner").hide();
+    }, 1500);
+  }
 
-$("#sections").on("change", function() {
-  loader();
+  $(".spinner").hide();
 
-  const section = $("#sections option:selected").val();
-  $(".content").empty();
-  $.ajax({
-    method: "GET",
-    url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=3ihvPWNhGBkw0DWmfc2rpg2te3TVeDov`
-  }).done(function(data) {
-    loaderDone();
-    $(".main-header, .logo, .section").addClass("loaded");
+  $("#sections").on("change", function() {
+    loader();
 
-    let count = 0;
+    const section = $("#sections option:selected").val();
+    $(".content").empty();
+    $.ajax({
+      method: "GET",
+      url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=3ihvPWNhGBkw0DWmfc2rpg2te3TVeDov`
+    }).done(function(data) {
+      loaderDone();
+      $(".main-header, .logo, .section").addClass("loaded");
 
-    for (let i = 0; i < 12; i++) {
-      if (data.results[i].multimedia.length >= 5 && count < 12) {
-        count += 1;
+      let count = 0;
 
-        let url = data.results[i].url;
-        let image = data.results[i].multimedia[4].url;
-        let abs = data.results[i].abstract;
+      for (let i = 0; i < 12; i++) {
+        if (data.results[i].multimedia.length >= 5 && count < 12) {
+          count += 1;
 
-        $(".content").append(
-          `<ul class="articles"> 
+          let url = data.results[i].url;
+          let image = data.results[i].multimedia[4].url;
+          let abs = data.results[i].abstract;
+
+          $(".content").append(
+            `<ul class="articles"> 
         <li class="article">
         <a href="${url}" id="article-link" alt="url" target="_blank">
         <img src =${image}>
@@ -42,8 +45,9 @@ $("#sections").on("change", function() {
         <p class="summary">${abs}</p>
         </li>
         </ul>`
-        );
+          );
+        }
       }
-    }
+    });
   });
 });
