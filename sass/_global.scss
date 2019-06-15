@@ -33,11 +33,44 @@ body {
   flex-direction: column;
   width: 100%;
 
+  @include mobile {
+    &.loaded {
+      height: 400px;
+    }
+    .logo {
+      &.loaded {
+        height: 250px;
+        padding-top: 3rem;
+        margin-top: 15px;
+      }
+    }
+  }
+
   @include tablet {
     flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: center;
+
+    &.loaded {
+      height: 125px;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      &.loaded {
+        height: 75px;
+        padding-top: 3rem;
+      }
+    }
+
+    .section {
+      &.loaded {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        padding-left: 4rem;
+      }
+    }
   }
 
   @include desktop {
@@ -59,6 +92,13 @@ body {
   font-weight: 400;
   margin-top: 4rem;
   margin-left: 0.75rem;
+
+  @include mobile {
+    &.loaded {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
 
   @include tablet {
     margin-top: 10rem;

@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./build/css/style.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontstylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./build/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/fontstylesheet.css" />
 
     <title>Instanews App</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header class="main-header">
+      <img class="logo" src="./assets/images/nyt-logo.svg" alt="nyt-logo" />
 
-        <img src="./assets/images/nyt-logo.svg" alt="nyt-logo">
-
-
-
-        <form class="section">
-            <p>Choose a section:</p>
-            <select class="sections" name="sections" id="sections">
-                <option value>Sections...</option>
-                <option value="home">Home</option>
-                <option value="arts">Arts</option>
-                <option value="business">Business</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-                <option value="fashion">Fashion</option>
-            </select>
-        </form>
+      <form class="section">
+        <p>Choose a section:</p>
+        <select class="sections" name="sections" id="sections">
+          <option value>Sections...</option>
+          <option value="home">Home</option>
+          <option value="arts">Arts</option>
+          <option value="business">Business</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+          <option value="fashion">Fashion</option>
+        </select>
+      </form>
     </header>
 
     <section class="content"></section>
 
-
-<div class="loader">
-  <div class="loader__bar"></div>
-  <div class="loader__bar"></div>
-  <div class="loader__bar"></div>
-  <div class="loader__bar"></div>
-  <div class="loader__bar"></div>
-  <div class="loader__ball"></div>
-</div>
-
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
 
     <footer>
-        <div class="footer">
-            <p class="ftext">@ Copyright 2019 INSTANEWS</p>
-        </div>
+      <div class="footer">
+        <p class="ftext">@ Copyright 2019 INSTANEWS</p>
+      </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
     <script src="./build/js/script.min.js"></script>
-
-</body>
-
+  </body>
 </html>
