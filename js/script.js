@@ -1,20 +1,26 @@
-// Loading Image
-let $loading = $(".loader").hide();
-$(document)
-  .ajaxStart(function() {
-    $loading.show();
-  }, 5000)
-  .ajaxStop(function() {
-    $loading.hide();
-  }, 5000);
+function loader() {
+  $(".spinner").show();
+  console.log("visible");
+}
+
+function loaderDone() {
+  setTimeout(function() {
+    $(".spinner").hide();
+  }, 3000);
+}
+
+$(".spinner").hide();
 
 $("#sections").on("change", function() {
+  loader();
+
   const section = $("#sections option:selected").val();
   $(".content").empty();
   $.ajax({
     method: "GET",
     url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=3ihvPWNhGBkw0DWmfc2rpg2te3TVeDov`
   }).done(function(data) {
+    loaderDone();
     $(".main-header, .logo, .section").addClass("loaded");
 
     let count = 0;
