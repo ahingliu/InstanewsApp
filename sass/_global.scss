@@ -32,16 +32,19 @@ body {
   height: 500px;
   flex-direction: column;
   width: 100%;
+  transition: $animatrix;
 
   @include mobile {
     &.loaded {
       height: 400px;
+      transition: $animatrix;
     }
     .logo {
       &.loaded {
         height: 250px;
-        padding-top: 3rem;
+        padding-top: 2rem;
         margin-top: 15px;
+        transition: $animatrix;
       }
     }
   }
@@ -51,6 +54,7 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
+    transition: $animatrix;
 
     &.loaded {
       height: 125px;
@@ -60,7 +64,7 @@ body {
     .logo {
       &.loaded {
         height: 75px;
-        padding-top: 3rem;
+        padding-top: 2rem;
       }
     }
 
@@ -78,6 +82,7 @@ body {
     align-items: left;
     justify-content: left;
     margin-left: 2rem;
+    transition: $animatrix;
   }
 
   img {
@@ -93,19 +98,23 @@ body {
   margin-top: 4rem;
   margin-left: 0.75rem;
 
-  @include mobile {
-    &.loaded {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-    }
+  &.loaded {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    transition: $animatrix;
   }
 
   @include tablet {
     margin-top: 10rem;
+    transition: $animatrix;
   }
 
   @include desktop {
     margin-top: 10rem;
+    transition: $animatrix;
+  }
+  @include mobile {
+    transition: $animatrix;
   }
 }
 
@@ -115,6 +124,7 @@ body {
   font-size: 18px;
   font-weight: 100;
   margin-top: 1rem;
+  transition: $animatrix;
 }
 
 footer {
@@ -166,10 +176,15 @@ footer {
     color: white;
     text-decoration: none;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0;
     bottom: 0;
     padding: 2rem;
     text-align: justify;
     line-height: 1.2rem;
+    transition: opacity 0.5s ease-in;
+
+    &:hover {
+      opacity: 0.85;
+    }
   }
 }
