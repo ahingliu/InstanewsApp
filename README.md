@@ -14,7 +14,7 @@ This is a one-page, responsive website (mobile first approach) that allows a use
 - Prettier
 - Lighthouse
 
-<img src="./assets/images/nyt-logo.svg"
+<img src="https://user-images.githubusercontent.com/43591615/59634808-762bf600-9104-11e9-8aef-c7f86c0c6ebb.PNG"
 
 # PERSONAL LEARNINGS:
 
