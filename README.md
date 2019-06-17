@@ -19,3 +19,12 @@ This is a one-page, responsive website (mobile first approach) that allows a use
 ## PERSONAL LEARNINGS:
 
 ## INSTALLATION INSTRUCTIONS:
+
+### PROJECT SANPSHOTS:
+
+- Mobile:
+  <img src="https://user-images.githubusercontent.com/43591615/59638145-77f9b780-910c-11e9-8cee-78d1a55f42a6.PNG">
+- Tablet
+  <img src="https://user-images.githubusercontent.com/43591615/59638141-762ff400-910c-11e9-913b-4cac92bf8d5d.PNG">
+- Desktop
+  <img src="https://user-images.githubusercontent.com/43591615/59638135-73350380-910c-11e9-8524-542492716f70.PNG">
