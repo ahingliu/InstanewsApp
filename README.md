@@ -18,12 +18,12 @@ This is a one-page, responsive website (mobile first approach) that allows a use
 
 ## PERSONAL LEARNINGS:
 
-This project seemed very simple at first, but it really helped me to grasp better a lot of concepts such as mobile first design, flexbox and media queries. The use of minifiers teached me the importance of a good performance, while acessibility is also a new concern to be taken care of. Jquery was such a powerful tool for this project and SASS was incredible. Made my CSS so much easier, cleaner and responsive. I like to keek thing tidy and SASS is the way to go from now on. Gulp in the other hand was very troublesome. Had to fix it several times to make it work and I believe we have more recent technology that could be used instead. The Ajax was great to work with and has great potential of usage. Prettier made my could look preeeety :).
+This project seemed very simple at first, but it really helped me to grasp better a lot of concepts such as mobile first design, flexbox and media queries. The use of minifiers teached me the importance of a good performance, while accessibility is also a new concern to be taken care of. Jquery was such a powerful tool for this project and SASS was incredible. Made my CSS so much easier, cleaner and responsive. I like to keek thing tidy and SASS is the way to go from now on. Gulp in the other hand was very troublesome. Had to fix it several times to make it work and I believe we have more recent technology that could be used instead. The Ajax was great to work with and has great potential of usage. Prettier made my could look preeeety :).
 
 ## INSTALLATION INSTRUCTIONS:
 
 - Download the zip folder and save it on your preferred directory.
-- Feel free to rename your folder with your preferrence.
+- Feel free to rename your folder with your preference.
 - Ensure you have [Node.js](https://nodejs.org/en/) installed first.
 
 **Install dependencies:**
