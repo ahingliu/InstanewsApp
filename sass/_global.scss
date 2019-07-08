@@ -31,7 +31,6 @@ body {
   align-items: center;
   height: 500px;
   flex-direction: column;
-  width: 100%;
   transition: $animatrix;
 
   @include mobile {
@@ -97,6 +96,10 @@ body {
   font-weight: 400;
   margin-top: 4rem;
   margin-left: 0.75rem;
+  padding-bottom: 50px;
+  @include tablet {
+    padding: 0;
+  }
 
   &.loaded {
     margin-top: 3rem;
@@ -130,7 +133,6 @@ body {
 footer {
   font-weight: 400;
   width: 100%;
-
   .ftext {
     padding: 2rem 0;
     text-align: center;
