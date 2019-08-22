@@ -1,97 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./build/css/style.min.css" />
-    <link rel="stylesheet" href="./assets/fonts/fontstylesheet.css" />
 
-    <title>Instanews App</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./build/css/style.min.css" />
+  <link rel="stylesheet" href="./assets/fonts/fontstylesheet.css" />
 
-  <body>
-    <header class="main-header">
-      <img class="logo" src="./assets/images/nyt-logo.svg" alt="nyt-logo" />
+  <title>Instanews App</title>
+</head>
 
-      <form class="section" aria-label="Select">
-        <p>Choose a section:</p>
-        <select
-          class="sections"
-          name="sections"
-          id="sections"
-          aria-label="filters"
-        >
-          <option value>Sections...</option>
-          <option value="home">Home</option>
-          <option value="arts">Arts</option>
-          <option value="business">Business</option>
-          <option value="sports">Sports</option>
-          <option value="technology">Technology</option>
-          <option value="fashion">Fashion</option>
-        </select>
-      </form>
-    </header>
+<body>
+  <header class="main-header">
+    <img class="logo" src="./assets/images/nyt-logo.svg" alt="nyt-logo" />
 
-    <section class="content"></section>
+    <form class="section" aria-label="Select">
+      <p>Choose a section:</p>
+      <select class="sections" name="sections" id="sections" aria-label="filters">
+        <option value>Sections...</option>
+        <option value="home">Home</option>
+        <option value="arts">Arts</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+        <option value="fashion">Fashion</option>
+      </select>
+    </form>
+  </header>
 
-    <div class="spinner">
-      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle
-          class="length"
-          fill="none"
-          stroke-width="8"
-          stroke-linecap="round"
-          cx="33"
-          cy="33"
-          r="28"
-        ></circle>
-      </svg>
-      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle
-          fill="none"
-          stroke-width="8"
-          stroke-linecap="round"
-          cx="33"
-          cy="33"
-          r="28"
-        ></circle>
-      </svg>
-      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle
-          fill="none"
-          stroke-width="8"
-          stroke-linecap="round"
-          cx="33"
-          cy="33"
-          r="28"
-        ></circle>
-      </svg>
-      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle
-          fill="none"
-          stroke-width="8"
-          stroke-linecap="round"
-          cx="33"
-          cy="33"
-          r="28"
-        ></circle>
-      </svg>
+  <section class="content"></section>
+
+  <div class="spinner">
+    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+    </svg>
+    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+    </svg>
+    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+    </svg>
+    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+    </svg>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p class="ftext">@ Copyright 2019 INSTANEWS</p>
     </div>
+  </footer>
 
-    <footer>
-      <div class="footer">
-        <p class="ftext">@ Copyright 2019 INSTANEWS</p>
-      </div>
-    </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./build/js/jquery.selectric.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/build/js/jquery.selectric.min.js"></script>
+  <script src="./build/js/script.min.js"></script>
+</body>
 
-    <script src="./build/js/script.min.js"></script>
-  </body>
 </html>
